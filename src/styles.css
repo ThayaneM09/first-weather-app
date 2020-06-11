@@ -1,0 +1,70 @@
+body {
+  background-image: url("../images/paris3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  border: 2px solid transparent;
+  width: 300px;
+  height: 622px;
+  margin: 20px auto;
+  font-family: "Montserrat", sans-serif;
+  color: #27496d;
+  background-color: #f4f4f4d2;
+  font-weight: bold;
+}
+.menu {
+  margin-top: 10px;
+}
+.todayInfo {
+  text-align: right;
+  margin-top: 30px;
+  font-size: 18px;
+}
+.tempMaxMin {
+  font-size: 12px;
+}
+.nextDaysWeather {
+  background-color: #00919e41;
+  line-height: 10px;
+  margin: 10px auto;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 20px;
+  font-size: 14px;
+  color: #27496d;
+  border-radius: 30px;
+  height: 32px;
+  width: 270px;
+}
+#tempMinToday {
+  font-size: 15px;
+}
+#searchIcon {
+  border: none;
+}
+#inputCity {
+  width: 120px;
+  border-radius: 30px;
+  border: none;
+  background-color: #00919e41;
+  text-align: center;
+}
+#city {
+  font-size: 50px;
+  color: #142850;
+}
+#country {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  line-height: 10px;
+  color: #00909e;
+}
+#tempNow {
+  font-size: 50px;
+  display: block;
+  position: relative;
+  line-height: 30px;
+}

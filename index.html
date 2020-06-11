@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/c26bfaad4d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>My WeatherApp</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="menu">
+        <div class="row">
+          <div class="col-3">
+            <p id="locationIcon"><i class="fas fa-map-marker-alt"></i></p>
+          </div>
+
+          <div class="col-9">
+            <form class="form">
+              <input
+                type="text"
+                name="city"
+                id="inputCity"
+                placeholder="City"
+              />
+              <button id="searchIcon"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="location">
+        <div class="row">
+          <div class="col">
+            <h1 id="city">Paris</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h2 id="country">France</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="todayInfo">
+        <div class="row">
+          <div class="col">
+            <p class="buttons">
+              <span id="celciusButton">ºC</span> |
+              <span id="fahreinheitButton">ºF</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <p id="day"></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <p id="tempNow">10<span class="celciusIcon">ºC</span></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <p id="tempMinToday">8<span class="celciusIcon">ºC</span></p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <p id="tip">You might need this <i class="fas fa-umbrella"></i></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nextDaysWeather">
+        <div class="row">
+          <div class="col-2">
+            <p><i class="fas fa-cloud-sun"></i></p>
+          </div>
+
+          <div class="col-5">
+            <p class="dayOfWeek">MON</p>
+          </div>
+
+          <div class="col-5">
+            <p class="temp">18ºC | 12ºC</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nextDaysWeather">
+        <div class="row">
+          <div class="col-2">
+            <p><i class="fas fa-cloud-sun-rain"></i></p>
+          </div>
+
+          <div class="col-5">
+            <p class="dayOfWeek">TUE</p>
+          </div>
+
+          <div class="col-5">
+            <p class="temp">18ºC | 12ºC</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nextDaysWeather">
+        <div class="row">
+          <div class="col-2">
+            <p><i class="fas fa-sun"></i></p>
+          </div>
+
+          <div class="col-5">
+            <p class="dayOfWeek">WED</p>
+          </div>
+
+          <div class="col-5">
+            <p class="temp">22ºC | 16ºC</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nextDaysWeather">
+        <div class="row">
+          <div class="col-2">
+            <p><i class="fas fa-sun"></i></p>
+          </div>
+
+          <div class="col-5">
+            <p class="dayOfWeek">THU</p>
+          </div>
+
+          <div class="col-5">
+            <p class="temp">22ºC | 16ºC</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nextDaysWeather">
+        <div class="row">
+          <div class="col-2">
+            <p><i class="fas fa-sun"></i></p>
+          </div>
+
+          <div class="col-5">
+            <p class="dayOfWeek">FRI</p>
+          </div>
+
+          <div class="col-5">
+            <p class="temp">22ºC | 16ºC</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/weather.js"></script>
+  </body>
+</html>
