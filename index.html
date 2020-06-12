@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>My WeatherApp</title>
   </head>
 
@@ -26,7 +27,9 @@
       <div class="menu">
         <div class="row">
           <div class="col-3">
-            <p id="locationIcon"><i class="fas fa-map-marker-alt"></i></p>
+            <button id="locationIcon">
+              <i class="fas fa-map-marker-alt"></i>
+            </button>
           </div>
 
           <div class="col-9">
@@ -60,8 +63,8 @@
         <div class="row">
           <div class="col">
             <p class="buttons">
-              <span id="celciusButton">ºC</span> |
-              <span id="fahreinheitButton">ºF</span>
+              <span id="celsiusButton"><a href="#">ºC</a></span> |
+              <span id="fahreinheitButton"><a href="#">ºF</a></span>
             </p>
           </div>
         </div>
@@ -74,19 +77,28 @@
 
         <div class="row">
           <div class="col">
-            <p id="tempNow">10<span class="celciusIcon">ºC</span></p>
+            <p id="tempNow">
+              <span class="value" id="currentTemperature">10</span
+              ><span class="temp-icon">ºC</span>
+            </p>
           </div>
         </div>
 
         <div class="row">
           <div class="col">
-            <p id="tempMinToday">8<span class="celciusIcon">ºC</span></p>
+            <p id="tempMinToday">
+              <span class="value" id="minTempNow">8</span
+              ><span class="temp-icon">ºC</span>
+            </p>
           </div>
         </div>
 
         <div class="row">
           <div class="col">
-            <p id="tip">You might need this <i class="fas fa-umbrella"></i></p>
+            <p>
+              <span id="tip">You might need this</span>
+              <i class="fas fa-umbrella" id="icon1"></i>
+            </p>
           </div>
         </div>
       </div>
@@ -102,7 +114,10 @@
           </div>
 
           <div class="col-5">
-            <p class="temp">18ºC | 12ºC</p>
+            <p class="temp">
+              <span class="value">18</span><span class="temp-icon">ºC</span> |
+              <span class="value">12</span><span class="temp-icon">ºC</span>
+            </p>
           </div>
         </div>
       </div>
@@ -118,7 +133,10 @@
           </div>
 
           <div class="col-5">
-            <p class="temp">18ºC | 12ºC</p>
+            <p class="temp">
+              <span class="value">18</span><span class="temp-icon">ºC</span> |
+              <span class="value">12</span><span class="temp-icon">ºC</span>
+            </p>
           </div>
         </div>
       </div>
@@ -134,7 +152,10 @@
           </div>
 
           <div class="col-5">
-            <p class="temp">22ºC | 16ºC</p>
+            <p class="temp">
+              <span class="value">22</span><span class="temp-icon">ºC</span> |
+              <span class="value">16</span><span class="temp-icon">ºC</span>
+            </p>
           </div>
         </div>
       </div>
@@ -150,7 +171,10 @@
           </div>
 
           <div class="col-5">
-            <p class="temp">22ºC | 16ºC</p>
+            <p class="temp">
+              <span class="value">22</span><span class="temp-icon">ºC</span> |
+              <span class="value">18</span><span class="temp-icon">ºC</span>
+            </p>
           </div>
         </div>
       </div>
@@ -166,7 +190,10 @@
           </div>
 
           <div class="col-5">
-            <p class="temp">22ºC | 16ºC</p>
+            <p class="temp">
+              <span class="value">18</span><span class="temp-icon">ºC</span>|
+              <span class="value">16</span><span class="temp-icon">ºC</span>
+            </p>
           </div>
         </div>
       </div>
