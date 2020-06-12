@@ -38,6 +38,13 @@ body {
   height: 32px;
   width: 270px;
 }
+.open-source-link {
+  font-size: 15px;
+  display: block;
+  text-align: center;
+  color: #142850;
+  padding: 20px;
+}
 #tempMinToday {
   font-size: 15px;
 }
