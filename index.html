@@ -39,6 +39,7 @@
                 name="city"
                 id="inputCity"
                 placeholder="City"
+                autocomplete="off"
               />
               <button id="searchIcon"><i class="fas fa-search"></i></button>
             </form>
@@ -63,8 +64,9 @@
         <div class="row">
           <div class="col">
             <p class="buttons">
-              <span id="celsiusButton"><a href="#">ºC</a></span> |
-              <span id="fahreinheitButton"><a href="#">ºF</a></span>
+              <span><a href="#" id="celsiusButton" class="active">ºC</a></span>
+              |
+              <span><a href="#" id="fahreinheitButton">ºF</a></span>
             </p>
           </div>
         </div>
@@ -87,7 +89,7 @@
         <div class="row">
           <div class="col">
             <p id="tempMinToday">
-              <span class="value" id="minTempNow">8</span
+              <span class="value" id="minTempNow">4</span
               ><span class="temp-icon">ºC</span>
             </p>
           </div>
@@ -97,7 +99,7 @@
           <div class="col">
             <p>
               <span id="tip">You might need this</span>
-              <i class="fas fa-umbrella" id="icon1"></i>
+              <i class="fas fa-umbrella" id="icon1" title="Umbrella"></i>
             </p>
           </div>
         </div>
@@ -197,14 +199,13 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <h3 class="open-source-link">
-          <a href="https://github.com/ThayaneM09?tab=repositories"
-            >Open-source code</a
-          >
-          by Thayane Marcelino
-        </h3>
-      </div>
+
+      <small class="open-source-link">
+        <a href="https://github.com/ThayaneM09?tab=repositories"
+          >Open-source code</a
+        >
+        by Thayane Marcelino
+      </small>
     </div>
     <script src="src/weather.js"></script>
   </body>

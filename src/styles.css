@@ -45,6 +45,13 @@ body {
   color: #142850;
   padding: 20px;
 }
+.buttons .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+.buttons .active:hover {
+  text-decoration: none;
+}
 #tempMinToday {
   font-size: 15px;
 }
