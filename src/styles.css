@@ -24,26 +24,12 @@ body {
 .tempMaxMin {
   font-size: 12px;
 }
-.nextDaysWeather {
-  background-color: #00919e41;
-  line-height: 10px;
-  margin: 10px auto;
-  text-align: center;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 20px;
-  font-size: 14px;
-  color: #27496d;
-  border-radius: 30px;
-  height: 32px;
-  width: 270px;
-}
 .open-source-link {
   font-size: 15px;
   display: block;
   text-align: center;
   color: #142850;
-  padding: 20px;
+  background-color: #f4f4f4d2;
 }
 .buttons .active {
   color: rgb(33, 33, 33);
@@ -89,4 +75,25 @@ body {
   display: block;
   position: relative;
   line-height: 30px;
+}
+#nextDaysWeather {
+  background-color: #00919e41;
+  line-height: 10px;
+  margin: 10px auto;
+  text-align: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 20px;
+  color: #27496d;
+  border-radius: 30px;
+  height: 32px;
+  width: 270px;
+}
+#hours,
+#temps {
+  font-size: 14px;
+}
+#icons {
+  display: block;
+  text-align: center;
 }
