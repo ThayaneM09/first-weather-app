@@ -66,23 +66,22 @@ function displayForecast(response) {
         forecast = response.data.list[index];
         forecastElement.innerHTML +=
             `<div class="row" id="nextDaysWeather">
-            <div class="col-2" id="icons">
-                <img
+            <div class="col-2">
+            <img
             src="http://openweathermap.org/img/wn/${
             forecast.weather[0].icon
             }@2x.png" width="40px"/>
             </div>
-
             <div class="col-4">
                 <h3 id="hours">
                 ${formatHours(forecast.dt * 1000)}
                 </h3>
             </div>
-
             <div class="col-6">
                 <p class="temp" id="temps">
-                    <span class="value" id="tempMax">${Math.round(forecast.main.temp_max)}</span>
-            <span class="temp-icon">ºC</span> |
+                    <span class="value" id="tempMax">
+            ${Math.round(forecast.main.temp_max)}
+            </span><span class="temp-icon">ºC</span> |
                 <span class="value" id="tempMin">${Math.round(forecast.main.temp_min)}</span>
                 <span class="temp-icon">ºC</span>
                 </p>

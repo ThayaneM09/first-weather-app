@@ -83,10 +83,10 @@ body {
   text-align: center;
   padding-top: 10px;
   padding-left: 10px;
-  padding-right: 20px;
+  padding-right: 5px;
   color: #27496d;
   border-radius: 30px;
-  height: 32px;
+  height: 45px;
   width: 270px;
 }
 #hours,
