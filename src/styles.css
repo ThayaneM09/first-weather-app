@@ -45,6 +45,10 @@ hr {
 .tipMessage {
   text-align: center;
 }
+.hours,
+.temp {
+  font-size: 15px;
+}
 #tip {
   font-size: 15px;
 }
