@@ -98,34 +98,41 @@
             </p>
           </div>
         </div>
-      <div class="row" id="adicionalInformations">
-        <div class="col">
-          <i class="fas fa-wind" title="Wind Speed"></i><p id="windSpeed">20km/h</p>
-        </div>
-        <div class="col">
-          <i class="fas fa-cloud-rain" title="Humidity"></i><p id="preciptation">20%</p>
-        </div>
-      </div>
-        <hr />      
-              <div class="row">
-                <div class="col">
-                  <p class="tipMessage">
-                    <span id="tip">You might need this</span>
-                    <i class="fas fa-umbrella" id="icon1" title="Umbrella"></i>
-                  </p>
-                </div>
-              </div>
-            
-            <div class="row" id="buttonNextHours">
-              <button class="buttonMore">
-                <i class="fas fa-angle-down"></i>
-              </button>
-            </div>
-
+        <div class="row" id="adicionalInformations">
+          <div class="col">
+            <i class="fas fa-wind" title="Wind Speed"></i>
+            <p id="windSpeed">20km/h</p>
           </div>
-
-          <div class="nextDaysWeather" id="forecast" hidden></div>
+          <div class="col">
+            <i class="fas fa-cloud-rain" title="Humidity"></i>
+            <p id="preciptation">20%</p>
+          </div>
         </div>
+        <hr />
+        <div class="row">
+          <div class="col">
+            <p class="tipMessage">
+              <span id="tip">You might need this</span>
+              <i class="fas fa-umbrella" id="icon1" title="Umbrella"></i>
+            </p>
+          </div>
+        </div>
+
+        <div class="row" id="buttonNextHours">
+          <button
+            class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#forecast"
+            aria-expanded="false"
+            aria-controls="forecast"
+            id="collapseButton"
+          >
+            <i class="fas fa-angle-down"></i>
+          </button>
+        </div>
+
+        <div class="collapse" id="forecast"></div>
       </div>
 
       <small class="open-source-link">

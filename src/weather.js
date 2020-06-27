@@ -31,7 +31,6 @@ function formatHours(timestamp) {
     }
     return `${hours}:${minutes}`;
 }
-
 function showWeather(response) {
     let cityName = document.querySelector("#city");
     cityName.innerHTML = response.data.name;
@@ -145,6 +144,7 @@ function changingToCelsius(event) {
     celsiusLink.classList.add("active");
     fahrenheitLink.classList.remove("active");
 }
+
 let searchCity = document.querySelector("#searchIcon");
 searchCity.addEventListener("click", handleSubmit);
 

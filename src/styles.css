@@ -28,9 +28,9 @@ hr {
 }
 .open-source-link {
   font-size: 15px;
-  position: relative;
+  position: fixed;
   color: #142850;
-  background-color: #f4f4f4d2;
+  margin: 0 auto;
 }
 .buttons .active {
   color: rgb(33, 33, 33);
@@ -38,17 +38,6 @@ hr {
 }
 .buttons .active:hover {
   text-decoration: none;
-}
-.buttonMore {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  margin: 0 auto;
-  color: #fff;
-  border: none;
-  background-color: #27496d;
-  font-family: "Montserrat", sans-serif;
-  border-radius: 50%;
 }
 .tipMessage {
   text-align: center;
@@ -130,4 +119,10 @@ hr {
 }
 #day {
   margin-bottom: 0;
+}
+#collapseButton {
+  display: block;
+  margin: 0 auto;
+  background-color: #27496d;
+  border-radius: 50%;
 }
