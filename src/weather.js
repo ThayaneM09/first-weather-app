@@ -47,14 +47,22 @@ function showWeather(response) {
     minCelsiusTemperature = response.data.main.temp_min;
     minTemperatureToday.innerHTML = Math.round(minCelsiusTemperature);
 
+    let preciptation = document.querySelector("#preciptation");
+
     let humidity = response.data.main.humidity;
+    preciptation.innerHTML = `${humidity} %`;
+
     let getTip = document.querySelector("#tip");
     if (humidity > 75) {
         getTip.innerHTML = "You might need this";
     } else {
         getTip.innerHTML = "You don't need this";
     }
+    let windSpeed = document.querySelector("#windSpeed");
+    windSpeed.innerHTML = `${Math.round((response.data.wind.speed) * 3.6)} Km/h`;
 
+    let weatherDescription = document.querySelector("#watherDescription");
+    weatherDescription.innerHTML = response.data.weather[0].main;
 }
 
 function displayForecast(response) {
@@ -126,16 +134,6 @@ function changingToFahreinheit(event) {
     minTemperatureToday.innerHTML = `${Math.round(minFahrenheitTemperature)} ºF`;
 
 }
-/*
-let forecastTempMax = document.querySelectorAll(".tempMax");
-console.log(forecastTempMax);
-
-for (let index = 0; index < 6; index++) {
-    let tempMaxValue = forecastTempMax[index];
-    forecastTempMax[index].innerHTML = (tempMaxValue + 9) / 5 + 32;
-}*/
-
-
 function changingToCelsius(event) {
     event.preventDefault();
     let tempValue = document.querySelector("#tempNow");
@@ -144,13 +142,9 @@ function changingToCelsius(event) {
     let minTemperatureInCelsius = document.querySelector('#tempMinToday');
     minTemperatureInCelsius.innerHTML = `${Math.round(minCelsiusTemperature)} ºC`;
 
-    //let forecastMaxTemperature = document.querySelector("#tempMax");
-    //forecastMaxTemperature.innerHTML = `${Math.round(forecast.main.temp_max)}ºC;
-
     celsiusLink.classList.add("active");
     fahrenheitLink.classList.remove("active");
 }
-
 let searchCity = document.querySelector("#searchIcon");
 searchCity.addEventListener("click", handleSubmit);
 

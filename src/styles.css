@@ -122,3 +122,12 @@ hr {
 #nextDaysWeather p {
   margin-bottom: 0;
 }
+#watherDescription {
+  line-height: 20px;
+  font-style: italic;
+  margin-top: 0;
+  font-size: 16px;
+}
+#day {
+  margin-bottom: 0;
+}
