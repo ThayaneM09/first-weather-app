@@ -79,11 +79,10 @@ function displayForecast(response) {
             </div>
             <div class="col-6">
                 <p class="temp" id="temps">
-                    <span class="value" id="tempMax">
-            ${Math.round(forecast.main.temp_max)}
-            </span><span class="temp-icon">ºC</span> |
-                <span class="value" id="tempMin">${Math.round(forecast.main.temp_min)}</span>
-                <span class="temp-icon">ºC</span>
+                    <span class="tempMax">
+            ${Math.round(forecast.main.temp_max)}</span><span>º</span>
+            |
+                <span class="tempMin">${Math.round(forecast.main.temp_min)}º</span>                
                 </p>
             </div>
         </div>`;
@@ -96,7 +95,7 @@ function searching(city) {
 
     apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayForecast);
-    console.log(apiUrl);
+
 }
 function handleSubmit(event) {
     event.preventDefault();
@@ -125,7 +124,18 @@ function changingToFahreinheit(event) {
     let minFahrenheitTemperature = (minCelsiusTemperature + 9) / 5 + 32;
     let minTemperatureToday = document.querySelector('#tempMinToday');
     minTemperatureToday.innerHTML = `${Math.round(minFahrenheitTemperature)} ºF`;
+
 }
+/*
+let forecastTempMax = document.querySelectorAll(".tempMax");
+console.log(forecastTempMax);
+
+for (let index = 0; index < 6; index++) {
+    let tempMaxValue = forecastTempMax[index];
+    forecastTempMax[index].innerHTML = (tempMaxValue + 9) / 5 + 32;
+}*/
+
+
 function changingToCelsius(event) {
     event.preventDefault();
     let tempValue = document.querySelector("#tempNow");
@@ -133,6 +143,9 @@ function changingToCelsius(event) {
 
     let minTemperatureInCelsius = document.querySelector('#tempMinToday');
     minTemperatureInCelsius.innerHTML = `${Math.round(minCelsiusTemperature)} ºC`;
+
+    //let forecastMaxTemperature = document.querySelector("#tempMax");
+    //forecastMaxTemperature.innerHTML = `${Math.round(forecast.main.temp_max)}ºC;
 
     celsiusLink.classList.add("active");
     fahrenheitLink.classList.remove("active");

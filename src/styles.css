@@ -3,11 +3,13 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+hr {
+  margin: 10px;
+}
 .container {
   border: 2px solid transparent;
   width: 300px;
-
-  margin: 20px auto;
+  margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   color: #27496d;
   background-color: #f4f4f4d2;
@@ -26,8 +28,7 @@ body {
 }
 .open-source-link {
   font-size: 15px;
-  display: block;
-  text-align: center;
+  position: relative;
   color: #142850;
   background-color: #f4f4f4d2;
 }
@@ -38,8 +39,30 @@ body {
 .buttons .active:hover {
   text-decoration: none;
 }
+.buttonMore {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin: 0 auto;
+  color: #fff;
+  border: none;
+  background-color: #27496d;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 50%;
+}
+.tipMessage {
+  text-align: center;
+}
+#tip {
+  font-size: 15px;
+}
 #tempMinToday {
   font-size: 15px;
+}
+#adicionalInformations {
+  font-size: 15px;
+  text-align: center;
+  height: 45px;
 }
 #searchIcon {
   border: none;
@@ -81,13 +104,11 @@ body {
   line-height: 10px;
   margin: 10px auto;
   text-align: center;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 5px;
   color: #27496d;
   border-radius: 30px;
   height: 45px;
   width: 270px;
+  align-items: center;
 }
 #hours,
 #temps {
@@ -96,4 +117,8 @@ body {
 #icons {
   display: block;
   text-align: center;
+}
+#nextDaysWeather h3,
+#nextDaysWeather p {
+  margin-bottom: 0;
 }

@@ -89,28 +89,41 @@
         <div class="row">
           <div class="col">
             <p id="tempMinToday">
-              <span class="value" id="minTempNow">4</span
+              <span class="value" id="minTempNow"></span
               ><span class="temp-icon">ºC</span>
             </p>
           </div>
         </div>
+      <div class="row" id="adicionalInformations">
+        <div class="col">
+          <i class="fas fa-wind"></i><p>20km/h</p>
+        </div>
+        <div class="col">
+          <i class="fas fa-cloud-rain"></i><p>20%</p>
+        </div>
+      </div>
+        <hr />      
+              <div class="row">
+                <div class="col">
+                  <p class="tipMessage">
+                    <span id="tip">You might need this</span>
+                    <i class="fas fa-umbrella" id="icon1" title="Umbrella"></i>
+                  </p>
+                </div>
+              </div>
+            
+            <div class="row" id="buttonNextHours">
+              <button class="buttonMore">
+                <i class="fas fa-angle-down"></i>
+              </button>
+            </div>
 
-        <div class="row">
-          <div class="col">
-            <p>
-              <span id="tip">You might need this</span>
-              <i class="fas fa-umbrella" id="icon1" title="Umbrella"></i>
-            </p>
           </div>
+
+          <div class="nextDaysWeather" id="forecast" hidden></div>
         </div>
       </div>
 
-      <div class="nextDaysWeather" id="forecast">
-        
-      </div>             
-      </div>
-      </div>
-      
       <small class="open-source-link">
         <a href="https://github.com/ThayaneM09?tab=repositories"
           >Open-source code</a
@@ -118,6 +131,7 @@
         by Thayane Marcelino
       </small>
     </div>
+
     <script src="src/weather.js"></script>
   </body>
 </html>
