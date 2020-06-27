@@ -80,14 +80,14 @@ function displayForecast(response) {
             }@2x.png" width="40px"/>
             </div>
             <div class="col-4">
-                <h3 id="hours">
+                <h3 class="hours">
                 ${formatHours(forecast.dt * 1000)}
                 </h3>
             </div>
             <div class="col-6">
-                <p class="temp" id="temps">
+                <p class="temp">
                     <span class="tempMax">
-            ${Math.round(forecast.main.temp_max)}</span><span>º</span>
+                ${Math.round(forecast.main.temp_max)}</span><span>º</span>
             |
                 <span class="tempMin">${Math.round(forecast.main.temp_min)}º</span>                
                 </p>
@@ -95,6 +95,7 @@ function displayForecast(response) {
         </div>`;
     }
 }
+
 function searching(city) {
     let apiKey = `9f983349ddb8c26dfc6cae681695c977`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;

@@ -28,9 +28,12 @@ hr {
 }
 .open-source-link {
   font-size: 15px;
-  position: fixed;
-  color: #142850;
+  display: block;
+  color: #fff;
   margin: 0 auto;
+  text-align: center;
+  background-color: #142850c2;
+  width: 300px;
 }
 .buttons .active {
   color: rgb(33, 33, 33);
@@ -98,10 +101,6 @@ hr {
   height: 45px;
   width: 270px;
   align-items: center;
-}
-#hours,
-#temps {
-  font-size: 14px;
 }
 #icons {
   display: block;
