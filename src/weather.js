@@ -71,6 +71,9 @@ function displayForecast(response) {
 
     for (let index = 0; index < 6; index++) {
         forecast = response.data.list[index];
+        forecastItemMaxTemp.push(Math.round(forecast.main.temp_max));
+        forecastItemMinTemp.push(Math.round(forecast.main.temp_min));
+
         forecastElement.innerHTML +=
             `<div class="row" id="nextDaysWeather">
             <div class="col-2">
@@ -133,19 +136,20 @@ function changingToFahreinheit(event) {
     minTemperatureToday.innerHTML = `${Math.round(minFahrenheitTemperature)} ºF`;
 
     let forecastMaxTemps = document.querySelectorAll(".tempMax");
-    forecastMaxTemps.forEach((forecastItem) => {
-        let forecastItemTemp = forecastItem.innerHTML;
-        return (forecastItem.innerHTML = Math.round((forecastItemTemp + 9) / 5 + 32));
+    forecastMaxTemps.forEach((forecastItem, index) => {
+        let forecastItemTemp = forecastItemMaxTemp[index];
+        return (forecastItem.innerHTML = Math.round(
+            (forecastItemTemp + 9) / 5 + 32
+        ));
     });
-
     let forecastMinTemps = document.querySelectorAll(".tempMin");
-    forecastMinTemps.forEach((forecastElement) => {
-        let forecastElementResult = forecastElement.innerHTML;
-        return (forecastElement.innerHTML = Math.round((forecastElementResult + 9) / 5 + 32));
+    forecastMinTemps.forEach((forecastElement, index) => {
+        let forecastElementResult = forecastItemMinTemp[index];
+        return (forecastElement.innerHTML = Math.round(
+            (forecastElementResult + 9) / 5 + 32
+        ));
     });
-
 }
-
 
 function changingToCelsius(event) {
     event.preventDefault();
@@ -159,19 +163,14 @@ function changingToCelsius(event) {
     fahrenheitLink.classList.remove("active");
 
     let forecastMaxTemps = document.querySelectorAll(".tempMax");
-    forecastMaxTemps.forEach((forecastItem) => {
-        forecastItemTemp = forecastItem.innerHTML;
-        return (forecastItem.innerHTML = Math.round((forecastItemTemp - 32) * 1.8));
+    forecastMaxTemps.forEach((forecastItem, index) => {
+        return (forecastItem.innerHTML = forecastItemMaxTemp[index]);
     });
-
     let forecastMinTemps = document.querySelectorAll(".tempMin");
-    forecastMinTemps.forEach((forecastElement) => {
-        forecastElementResult = forecastElement.innerHTML;
-        return (forecastElement.innerHTML = Math.round((forecastElementResult - 32) * 1.8));
+    forecastMinTemps.forEach((forecastElement, index) => {
+        return (forecastElement.innerHTML = forecastItemMinTemp[index]);
     });
 }
-
-
 
 let searchCity = document.querySelector("#searchIcon");
 searchCity.addEventListener("click", handleSubmit);
@@ -188,7 +187,7 @@ celsiusLink.addEventListener("click", changingToCelsius);
 let celsiusTemperature = null;
 let minCelsiusTemperature = null;
 
-let forecastItemTemp = null;
-let forecastElementResult = null;
+let forecastItemMaxTemp = [];
+let forecastItemMinTemp = [];
 
 searching("Paris");
