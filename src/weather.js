@@ -38,6 +38,14 @@ function showWeather(response) {
     let countryName = document.querySelector("#country");
     countryName.innerHTML = response.data.sys.country;
 
+    let iconElement = document.querySelector("#weatherIcon");
+    iconElement.setAttribute(
+        "src",
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconElement.setAttribute("alt", response.data.weather[0].description);
+
+
     let currentTemperature = document.querySelector("#currentTemperature");
     celsiusTemperature = response.data.main.temp;
     currentTemperature.innerHTML = Math.round(celsiusTemperature);
@@ -60,7 +68,7 @@ function showWeather(response) {
     let windSpeed = document.querySelector("#windSpeed");
     windSpeed.innerHTML = `${Math.round((response.data.wind.speed) * 3.6)} Km/h`;
 
-    let weatherDescription = document.querySelector("#watherDescription");
+    let weatherDescription = document.querySelector("#weatherDescription");
     weatherDescription.innerHTML = response.data.weather[0].main;
 }
 
