@@ -171,7 +171,6 @@ function changingToCelsius(event) {
         return (forecastElement.innerHTML = forecastItemMinTemp[index]);
     });
 }
-
 let searchCity = document.querySelector("#searchIcon");
 searchCity.addEventListener("click", handleSubmit);
 
