@@ -89,13 +89,12 @@ function displayForecast(response) {
                     <span class="tempMax">
                 ${Math.round(forecast.main.temp_max)}</span><span>º</span>
             |
-                <span class="tempMin">${Math.round(forecast.main.temp_min)}º</span>                
+                <span class="tempMin">${Math.round(forecast.main.temp_min)}</span><span>º</span>                
                 </p>
             </div>
         </div>`;
     }
 }
-
 function searching(city) {
     let apiKey = `9f983349ddb8c26dfc6cae681695c977`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
@@ -133,7 +132,21 @@ function changingToFahreinheit(event) {
     let minTemperatureToday = document.querySelector('#tempMinToday');
     minTemperatureToday.innerHTML = `${Math.round(minFahrenheitTemperature)} ºF`;
 
+    let forecastMaxTemps = document.querySelectorAll(".tempMax");
+    forecastMaxTemps.forEach((forecastItem) => {
+        let forecastItemTemp = forecastItem.innerHTML;
+        return (forecastItem.innerHTML = Math.round((forecastItemTemp + 9) / 5 + 32));
+    });
+
+    let forecastMinTemps = document.querySelectorAll(".tempMin");
+    forecastMinTemps.forEach((forecastElement) => {
+        let forecastElementResult = forecastElement.innerHTML;
+        return (forecastElement.innerHTML = Math.round((forecastElementResult + 9) / 5 + 32));
+    });
+
 }
+
+
 function changingToCelsius(event) {
     event.preventDefault();
     let tempValue = document.querySelector("#tempNow");
@@ -144,7 +157,21 @@ function changingToCelsius(event) {
 
     celsiusLink.classList.add("active");
     fahrenheitLink.classList.remove("active");
+
+    let forecastMaxTemps = document.querySelectorAll(".tempMax");
+    forecastMaxTemps.forEach((forecastItem) => {
+        forecastItemTemp = forecastItem.innerHTML;
+        return (forecastItem.innerHTML = Math.round((forecastItemTemp - 32) * 1.8));
+    });
+
+    let forecastMinTemps = document.querySelectorAll(".tempMin");
+    forecastMinTemps.forEach((forecastElement) => {
+        forecastElementResult = forecastElement.innerHTML;
+        return (forecastElement.innerHTML = Math.round((forecastElementResult - 32) * 1.8));
+    });
 }
+
+
 
 let searchCity = document.querySelector("#searchIcon");
 searchCity.addEventListener("click", handleSubmit);
@@ -160,4 +187,8 @@ celsiusLink.addEventListener("click", changingToCelsius);
 
 let celsiusTemperature = null;
 let minCelsiusTemperature = null;
+
+let forecastItemTemp = null;
+let forecastElementResult = null;
+
 searching("Paris");
