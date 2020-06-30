@@ -119,6 +119,7 @@ function handleSubmit(event) {
     event.preventDefault();
     let wCity = document.querySelector("#inputCity");
     searching(wCity.value);
+    console.log(wCity.value);
 }
 function showLocation(location) {
     navigator.geolocation.getCurrentPosition(showCoords);
@@ -190,6 +191,10 @@ fahrenheitLink.addEventListener("click", changingToFahreinheit);
 
 let celsiusLink = document.querySelector("#celsiusButton");
 celsiusLink.addEventListener("click", changingToCelsius);
+
+let form = document.querySelector(".form");
+form.addEventListener("submit", handleSubmit);
+
 
 let celsiusTemperature = null;
 let minCelsiusTemperature = null;
