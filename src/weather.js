@@ -45,14 +45,13 @@ function showWeather(response) {
     );
     iconElement.setAttribute("alt", response.data.weather[0].description);
 
-
     let currentTemperature = document.querySelector("#currentTemperature");
     celsiusTemperature = response.data.main.temp;
-    currentTemperature.innerHTML = Math.round(celsiusTemperature);
+    currentTemperature.innerHTML = `${Math.round(celsiusTemperature)}ºC`
 
     let minTemperatureToday = document.querySelector("#minTempNow");
     minCelsiusTemperature = response.data.main.temp_min;
-    minTemperatureToday.innerHTML = Math.round(minCelsiusTemperature);
+    minTemperatureToday.innerHTML = `${Math.round(minCelsiusTemperature)}ºC`;
 
     let preciptation = document.querySelector("#preciptation");
 
@@ -68,11 +67,14 @@ function showWeather(response) {
     let windSpeed = document.querySelector("#windSpeed");
     windSpeed.innerHTML = `${Math.round((response.data.wind.speed) * 3.6)} Km/h`;
 
+
     let weatherDescription = document.querySelector("#weatherDescription");
     weatherDescription.innerHTML = response.data.weather[0].main;
 }
 
 function displayForecast(response) {
+    forecastItemMaxTemp = [];
+    forecastItemMinTemp = [];
     let forecastElement = document.querySelector('#forecast');
     forecastElement.innerHTML = null;
     let forecast = null;
@@ -98,13 +100,13 @@ function displayForecast(response) {
             <div class="col-6">
                 <p class="temp">
                     <span class="tempMax">
-                ${Math.round(forecast.main.temp_max)}</span><span>º</span>
-            |
+                ${Math.round(forecast.main.temp_max)}</span><span>º</span>            |
                 <span class="tempMin">${Math.round(forecast.main.temp_min)}</span><span>º</span>                
                 </p>
             </div>
         </div>`;
     }
+
 }
 function searching(city) {
     let apiKey = `9f983349ddb8c26dfc6cae681695c977`;
@@ -119,7 +121,6 @@ function handleSubmit(event) {
     event.preventDefault();
     let wCity = document.querySelector("#inputCity");
     searching(wCity.value);
-    console.log(wCity.value);
 }
 function showLocation(location) {
     navigator.geolocation.getCurrentPosition(showCoords);
@@ -159,11 +160,10 @@ function changingToFahreinheit(event) {
         ));
     });
 }
-
 function changingToCelsius(event) {
     event.preventDefault();
     let tempValue = document.querySelector("#tempNow");
-    tempValue.innerHTML = `${Math.round(celsiusTemperature)}ºC`;
+    tempValue.innerHTML = `${Math.round(celsiusTemperature)} ºC`;
 
     let minTemperatureInCelsius = document.querySelector('#tempMinToday');
     minTemperatureInCelsius.innerHTML = `${Math.round(minCelsiusTemperature)} ºC`;
@@ -194,7 +194,6 @@ celsiusLink.addEventListener("click", changingToCelsius);
 
 let form = document.querySelector(".form");
 form.addEventListener("submit", handleSubmit);
-
 
 let celsiusTemperature = null;
 let minCelsiusTemperature = null;
