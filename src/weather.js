@@ -67,9 +67,9 @@ function showWeather(response) {
     let windSpeed = document.querySelector("#windSpeed");
     windSpeed.innerHTML = `${Math.round((response.data.wind.speed) * 3.6)} Km/h`;
 
-
     let weatherDescription = document.querySelector("#weatherDescription");
     weatherDescription.innerHTML = response.data.weather[0].main;
+    displayForecast(response);
 }
 
 function displayForecast(response) {
