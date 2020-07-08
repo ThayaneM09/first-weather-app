@@ -25,6 +25,9 @@ hr {
   margin-top: 30px;
   font-size: 18px;
 }
+.tempMaxMin {
+  font-size: 12px;
+}
 .open-source-link {
   font-size: 12px;
   display: block;
@@ -42,6 +45,10 @@ hr {
 }
 .tipMessage {
   text-align: center;
+}
+.hours,
+.temp {
+  font-size: 15px;
 }
 #tip {
   font-size: 15px;
@@ -89,8 +96,39 @@ hr {
   position: relative;
   line-height: 30px;
 }
+#nextDaysWeather {
+  background-color: #00a7cc79;
+  line-height: 10px;
+  margin: 10px auto;
+  text-align: center;
+  color: #142850;
+  border-radius: 30px;
+  height: 45px;
+  width: 270px;
+  align-items: center;
+}
+#icons {
+  display: block;
+  text-align: center;
+}
+#nextDaysWeather h3,
+#nextDaysWeather p {
+  margin-bottom: 0;
+}
+#watherDescription {
+  line-height: 20px;
+  font-style: italic;
+  margin-top: 0;
+  font-size: 16px;
+}
 #day {
   margin-bottom: 0;
+}
+#collapseButton {
+  display: block;
+  margin: 0 auto;
+  background-color: #27496d;
+  border-radius: 50%;
 }
 #weatherIcon {
   display: block;
