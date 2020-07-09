@@ -32,6 +32,9 @@ function formatHours(timestamp) {
     return `${hours}:${minutes}`;
 }
 function showWeather(response) {
+    celsiusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
+
     let cityName = document.querySelector("#city");
     cityName.innerHTML = response.data.name;
 
